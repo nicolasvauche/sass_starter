@@ -1,0 +1,11 @@
+& > footer {
+    padding: 1rem;
+    margin: 0 auto;
+    width: $boxed-width;
+    box-sizing: border-box;
+    background-color: $color-white;
+
+    @include respondTo(md) {
+        width: $boxed-width-responsive;
+    }
+}

@@ -1,0 +1,63 @@
+html {
+    font-size: 16px;
+
+    body {
+        font-family: $font-family-primary;
+        font-size: 1rem;
+        color: $color-black;
+        background-color: $color-grey;
+
+        @import "header";
+
+        @import "navigation";
+
+        & > main {
+            display: grid;
+            grid-template-columns: 8fr 2fr;
+            grid-gap: 0.5rem;
+            margin: 0 auto 0.5rem;
+            width: $boxed-width;
+            box-sizing: border-box;
+
+            @include respondTo(sm) {
+                display: block;
+                width: $boxed-width-responsive;
+            }
+
+            @include respondTo(md) {
+                width: $boxed-width-responsive;
+            }
+
+            article {
+                padding: 1rem;
+                background-color: $color-white;
+
+                h2 {
+                    font-family: $font-family-secondary;
+                    font-size: 1.75rem;
+                    text-align: center;
+                }
+
+                section {
+                    h3 {
+                        font-family: $font-family-secondary;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            aside {
+                padding: 1rem;
+                background-color: $color-primary;
+
+                h2 {
+                    font-family: $font-family-secondary;
+                    font-size: 1.75rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        @import "footer";
+    }
+}

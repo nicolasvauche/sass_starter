@@ -1,0 +1,57 @@
+& > nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 0 auto 0.5rem;
+    width: $boxed-width;
+    box-sizing: border-box;
+    background-color: $color-primary;
+
+    @include respondTo(sm) {
+        display: block;
+        width: $boxed-width-responsive;
+    }
+
+    @include respondTo(md) {
+        width: $boxed-width-responsive;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex: 0.7;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        @include respondTo(sm) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        li {
+            @include respondTo(sm) {
+                flex: 0 0 50%;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            a {
+                padding: 0.5rem 1rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-black;
+                transition: all $transition-default;
+
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    @import "searchbar";
+}

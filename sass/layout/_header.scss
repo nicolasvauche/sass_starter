@@ -1,0 +1,33 @@
+& > header {
+    padding: 1rem;
+    margin: 0 auto 0.5rem;
+    width: $boxed-width;
+    box-sizing: border-box;
+
+    @include respondTo(sm) {
+        width: $boxed-width-responsive;
+    }
+
+    @include respondTo(md) {
+        width: $boxed-width-responsive;
+    }
+
+    h1 {
+        margin: 0;
+        font-family: $font-family-secondary;
+        font-size: 2rem;
+        text-align: center;
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+            text-shadow: 2px 2px 4px $color-black;
+            transition: all $transition-default;
+
+            &:hover {
+                color: $color-primary;
+                text-shadow: 4px 4px 4px $color-black;
+            }
+        }
+    }
+}

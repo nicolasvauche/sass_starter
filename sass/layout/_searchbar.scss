@@ -1,0 +1,34 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.3;
+
+    input[type="search"] {
+        flex: 1;
+        padding: 0.5rem 0.25rem;
+        box-sizing: border-box;
+        margin-right: 0.5rem;
+        font-family: inherit;
+        font-size: 0.9rem;
+        color: $color-black;
+        border: 1px solid $color-white;
+    }
+
+    input[type="submit"] {
+        padding: 0.5rem 1.5rem;
+        box-sizing: border-box;
+        font-family: inherit;
+        font-size: 0.9rem;
+        color: $color-white;
+        background-color: $color-black;
+        border: 1px solid $color-black;
+        cursor: pointer;
+        transition: all $transition-default;
+
+        &:hover {
+            color: $color-black;
+            background-color: $color-white;
+        }
+    }
+}
